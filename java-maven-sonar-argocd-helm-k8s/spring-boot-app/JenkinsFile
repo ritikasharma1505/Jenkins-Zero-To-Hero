@@ -56,6 +56,10 @@ pipeline {
                     git config user.email "ritikasharma1505@gmail.com"
                     git config user.name "ritika"
                     BUILD_NUMBER=${BUILD_NUMBER}
+
+                    sh 'chmod +x /path/to/script.sh'  // Add this if the script needs execution permission  //new
+                    sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/                         //new
+
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                     // git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                     // git commit -m "Update deployment image to version ${BUILD_NUMBER}"
