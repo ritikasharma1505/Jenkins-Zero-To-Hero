@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: abhishekf5/ultimate-cicd:replaceImageTag
+        image: ritikasharma1505/ultimate-cicd:replaceImageTag             //changed dockerhub username
         ports:
         - containerPort: 8080
