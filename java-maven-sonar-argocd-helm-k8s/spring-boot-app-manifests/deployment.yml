@@ -18,4 +18,4 @@ spec:
       - name: spring-boot-app
         image: ritikasharma1505/ultimate-cicd:4  # Dynamically replaced with the build number
         ports:
-        - containerPort: 8080
+        - containerPort: 8082
