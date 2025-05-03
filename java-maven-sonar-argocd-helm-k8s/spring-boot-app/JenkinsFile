@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://3.143.7.31:9000"                          //update sonar url, before build
+        SONAR_URL = "http://3.143.7.31:9000"                          # update sonar url, before build
       }
       steps {
         withCredentials([string(credentialsId: 'sonar', variable: 'SONAR_AUTH_TOKEN')]) {
@@ -58,7 +58,7 @@ pipeline {
                     BUILD_NUMBER=${BUILD_NUMBER}
 
                     # Clean up untracked build artifacts
-                    rm -rf java-maven-sonar-argocd-helm-k8s/spring-boot-app/target
+                    rm -rf java-maven-sonar-argocd-helm-k8s/spring-boot-app/target                             # error solution
 
                     # Replace image tag
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
