@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://3.144.244.29:9000"                          //update sonar url here
+        SONAR_URL = "http://3.143.7.31:9000"                          //update sonar url, before build
       }
       steps {
         withCredentials([string(credentialsId: 'sonar', variable: 'SONAR_AUTH_TOKEN')]) {
