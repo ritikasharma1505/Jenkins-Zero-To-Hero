@@ -300,11 +300,11 @@ kubectl get secret -n argocd argocd-initial-admin-secret -o jsonpath="{.data.pas
 ```
 
 Create Application:
-Name 
-Default
-Repo URL -
-Path -
-Namespace - default
+- Name 
+- Default
+- Repo URL -
+- Path -
+- Namespace - default
 
 ![alt text](argocd-app-status.png)
 
@@ -351,5 +351,6 @@ sudo systemctl restart jenkins
 
 - Make sure to install kind, kubectl, docker on kind-Argo instance before creating cluster 
 
-- The deployment.yaml keeps updating the tag, make sure before rebuild update it to image: <dockerhub-username>/ultimate-cicd:replaceImageTag
+- The deployment.yaml keeps updating the tag, make sure before rebuild update it to image:  
+  dockerhub-username/ultimate-cicd:replaceImageTag
 
