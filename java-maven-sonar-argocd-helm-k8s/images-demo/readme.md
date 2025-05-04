@@ -353,5 +353,3 @@ sudo systemctl restart jenkins
 
 - The deployment.yaml keeps updating the tag, make sure before rebuild update it to image: <dockerhub-username>/ultimate-cicd:replaceImageTag
 
-
-HAPPY LEARNING 👍
